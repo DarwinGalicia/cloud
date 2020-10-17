@@ -1,10 +1,5 @@
-FROM node:12-alpine
-WORKDIR /app
-
-EXPOSE 4200
-ENV PATH=/app/node_modules/.bin:$PATH
-
-COPY package*.json /app/
-RUN npm install
-
-CMD ng serve --host 0.0.0.0
+FROM nginx:1.17.8-alpine
+COPY nginx.conf /etc/nginx/nginx.conf
+WORKDIR /usr/share/nginx/html
+COPY dist/demo-docker .
+EXPOSE 80

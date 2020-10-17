@@ -1,0 +1,29 @@
+.calculadora_main_container {
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 5% 95%;
+}
+
+.calculadora_header {
+    margin-left: 10%;
+}
+
+.calculadora_content {
+    margin-left: 10%;
+}
+
+.two_row {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.options {
+    display: inline-flex;
+    margin: auto
+}
+
+._order {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
