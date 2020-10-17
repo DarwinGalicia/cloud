@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'demo-docker';
 
-  number_value_1 = 0;
-  number_value_2 = 0;
+  number1 = 0;
+  number2 = 0;
   answer = 0;
 
   constructor() { }
@@ -18,10 +18,12 @@ export class AppComponent {
   }
 
   type(_type) {
-    if (_type === '+') {
-      this.answer = this.number_value_1 + this.number_value_2;
-    } else if (_type === '-') {
-      this.answer = this.number_value_1 - this.number_value_2;
+    console.log("Llego, aqui" + _type);
+    console.log(this.number1);
+    if (_type == '+') {
+      this.answer = this.number1 + this.number2;
+    } else if (_type == '-') {
+      this.answer = this.number1 - this.number2;
     }
   }
 }
